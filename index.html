@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Marketplace</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Local Marketplace</h1>
+  </header>
+  <main id="main-content">
+    <section id="login-section">
+      <h2>Login</h2>
+      <form id="login-form">
+        <input type="text" id="username" placeholder="Username" required />
+        <select id="role">
+          <option value="user">User</option>
+          <option value="seller">Seller</option>
+        </select>
+        <button type="submit">Login</button>
+      </form>
+    </section>
+
+    <section id="dashboard-section" style="display: none;">
+      <h2 id="dashboard-title"></h2>
+      <button id="logout-button">Logout</button>
+      <div id="user-dashboard" style="display: none;">
+        <h3>Available Items</h3>
+        <div id="user-items-container"></div>
+        <input type="text" id="user-search" placeholder="Search items..." />
+      </div>
+      <div id="seller-dashboard" style="display: none;">
+        <h3>Add a New Item</h3>
+        <form id="item-form">
+          <input type="text" id="name" placeholder="Item Name" required />
+          <input type="text" id="description" placeholder="Description" required />
+          <input type="number" id="price" placeholder="Price (₹)" required />
+          <select id="category">
+            <option value="Produce">Produce</option>
+            <option value="Handicrafts">Handicrafts</option>
+            <option value="Other">Other</option>
+          </select>
+          <button type="submit">Add Item</button>
+        </form>
+        <h3>Your Inventory</h3>
+        <div id="seller-items-container"></div>
+      </div>
+    </section>
+
+    <section id="payment-section" style="display: none;">
+      <h2>Payment</h2>
+      <form id="payment-form">
+        <input type="text" id="payment-name" placeholder="Name on Card" required />
+        <input type="text" id="payment-card-number" placeholder="Card Number" required />
+        <input type="text" id="payment-expiry" placeholder="Expiry Date (MM/YY)" required />
+        <input type="text" id="payment-cvc" placeholder="CVC" required />
+        <button type="submit">Pay</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Local Marketplace</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
